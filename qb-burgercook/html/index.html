@@ -1,0 +1,82 @@
+<!--
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+(c) 2025 NUNANINA | License: CC BY-NC-SA 4.0
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+-->
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+  content="default-src 'self' data: blob: filesystem: https:; 
+           script-src 'self' 'unsafe-inline'; 
+           connect-src 'self' https:;
+           img-src 'self' data: blob:; 
+           style-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Burgershot Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal">
+      <div class="modal-inner">
+        <section class="left-col">
+          <header class="menu-header">
+            <h2>Menu Category</h2>
+          <div class="categories">
+            <button class="cat active" data-cat="burger"><img src="images/ic_burger.png" alt=""></button>
+            <button class="cat" data-cat="snack"><img src="images/ic_snack.png" alt=""></button>
+            <button class="cat" data-cat="drink"><img src="images/ic_drink.png" alt=""></button>
+            <button class="cat" data-cat="dessert"><img src="images/ic_dessert.png" alt=""></button>
+            <button class="cat" data-cat="set"><img src="images/ic_set.png" alt=""></button>
+          </div>
+          </header>
+
+          <h3 class="choose-title">Choose Order</h3>
+
+          <main id="recipes" class="items-grid" aria-live="polite">
+            <!-- cards injected by script.js -->
+          </main>
+        </section>
+
+        <aside class="right-col">
+          <div class="right-inner">
+            <div id="selected-preview" class="selected-preview">
+              <img id="sel-img" src="images/default.png" alt="selected" class="sel-img">
+              <div class="sel-info">
+                <div id="sel-name" class="sel-name">เลือกเมนู</div>
+                <div id="sel-desc" class="sel-desc">คลิกที่เมนูทางซ้ายเพื่อดูส่วนผสม</div>
+
+                <div class="sel-ingredients">
+                  <h4>ส่วนผสม</h4>
+                  <ul id="sel-ingredients-list" class="ingredients-list">
+                    <!-- injected -->
+                  </ul>
+                </div>
+
+                <div class="progress-wrap" id="right-progress" aria-hidden="true">
+                  <div class="progress-bar" id="right-progress-bar" style="width:0%"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="right-actions">
+              <button id="cookBtn" class="btn-cook" disabled>ทำอาหาร</button>
+            </div>
+
+          </div>
+        </aside>
+      </div>
+
+      <footer class="modal-foot">
+        <button id="closeBtn" class="btn-close">✖ ปิด</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
