@@ -1,0 +1,61 @@
+<!--
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+(c) 2025 NUNANINA | License: CC BY-NC-SA 4.0
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+-->
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' data: blob: filesystem: https:;
+             script-src 'self' 'unsafe-inline';
+             connect-src 'self' https:;
+             img-src 'self' data: blob:;
+             style-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>McDonald's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay" class="hidden">
+    <div id="shop-container">
+      <div class="shop-left">
+        <h2 class="shop-title">🍟 McDonald's</h2>
+        <div id="items-list" class="items-list">
+          <!-- Item-->
+        </div>
+      </div>
+      <div class="shop-right">
+        <h3>ตะกร้าสินค้า</h3>
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>สินค้า</th>
+              <th>จำนวน</th>
+              <th>ราคา</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--list-->
+          </tbody>
+        </table>
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <span id="total-items">0 รายการ</span>
+            <span id="total-price">รวม: $0</span>
+          </div>
+          <div class="cart-buttons">
+            <button id="pay-button" class="btn-pay">ชำระเงิน</button>
+            <button id="close-button" class="btn-close">ปิดร้าน</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
