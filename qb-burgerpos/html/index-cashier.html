@@ -1,0 +1,63 @@
+<!--
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+(c) 2025 NUNANINA | License: CC BY-NC-SA 4.0
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+-->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cashier</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cashier-overlay" class="hidden">
+    <div id="cashier" class="layout-threecol">
+      <div class="left-col panel">
+        <div class="cats-column">
+          <div class="order-title small">Burgershot Shop</div>
+          <!-- category tabs (icons vertical) -->
+          <div id="category-tabs" class="category-tabs"></div>
+        </div>
+
+        <div class="items-column">
+          <!-- header above items -->
+          <div class="items-header">รายการสินค้า</div>
+          <!-- items list -->
+          <div id="items-list" class="items-list"></div>
+        </div>
+      </div>
+
+      <div class="center-panel panel">
+        <div class="cart-header">ตะกร้าสินค้า</div>
+        <table id="cart-table" class="cart-table">
+          <thead><tr><th>สินค้า</th><th>จำนวน</th><th>ราคา</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="cart-total-row">
+          <div id="total-items">0 รายการ</div>
+          <div id="total-price">รวม: $0.00</div>
+        </div>
+
+        <div class="right-actions-row">
+          <input id="recipient-input" placeholder="ชื่อผู้รับ/หมายเหตุ" />
+          <div class="action-buttons">
+            <button id="sent-button" class="btn-sent">ส่งออเดอร์</button>
+            <button id="close-button" class="btn-close">ปิด</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="board" class="right-panel panel">
+        <div class="board-header order-title">Burgershot Order</div>
+        <div id="order-list" class="order-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script-cashier.js"></script>
+</body>
+</html>
